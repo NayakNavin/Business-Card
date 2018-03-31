@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="name">Toss It</string>
+    <string name="address">4th Floor, Zone, Asyst Park,\nPlot No. 37, Block- GN, Sector-V,\nSalt Lake City, Bangalore – 560071</string>
+    <string name="number">+91 7047621458</string>
+    <string name="email">contact@tossit.co</string>
+    <string name="web">www.tossit.co</string>
+    <string name="about">When we say good, we don’t just mean good food. We also mean the goodness that good food leads to. Good memories, a good temper, a good day, a good burp. And we know that when our food leaves our kitchens, we’re creating all that.</string>
+</resources>
