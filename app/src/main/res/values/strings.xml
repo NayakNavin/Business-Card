@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Business Card</string>
     <string name="name">Toss It</string>
-    <string name="address">4th Floor, Zone, Asyst Park,\nPlot No. 37, Block- GN, Sector-V,\nSalt Lake City, Bangalore – 560071</string>
+    <string name="address">4th Floor, Zone B, Asyst Park,\nPlot No. 37, Block- GN,\nSector-V, Salt Lake City, Bangalore – 560071</string>
     <string name="number">+91 7047621458</string>
     <string name="email">contact@tossit.co</string>
     <string name="web">www.tossit.co</string>

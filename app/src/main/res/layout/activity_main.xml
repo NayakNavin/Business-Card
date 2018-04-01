@@ -4,28 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorAccent">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
 
-        <!--<ImageView
-            android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="false"
-            android:src="@drawable/tossit"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />-->
+        <ImageView
+            android:id="@+id/phone_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/phone"
+            app:layout_constraintRight_toLeftOf="@id/number"
+            app:layout_constraintTop_toBottomOf="@+id/qrCode" />
+
+
+        <ImageView
+            android:id="@+id/email_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/email"
+            app:layout_constraintRight_toLeftOf="@id/email"
+            app:layout_constraintTop_toBottomOf="@+id/phone_img" />
+
+        <ImageView
+            android:id="@+id/web_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/home"
+            app:layout_constraintRight_toLeftOf="@id/web"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+        <ImageView
+            android:id="@+id/add_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/map"
+            app:layout_constraintLeft_toRightOf="@id/address"
+            app:layout_constraintTop_toBottomOf="@id/about" />
+
 
         <TextView
             android:id="@+id/name"
-            app:layout_editor_absoluteY="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
@@ -33,57 +65,61 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-             />
+            app:layout_editor_absoluteY="16dp" />
 
         <TextView
             android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:autoLink="phone"
+            android:background="#000000"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:background="#000000"
-            android:textColor="#FFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:text="@string/number"
+            android:textColor="#FFF"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/qrCode" />
 
         <TextView
             android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginTop="4dp"
+            android:autoLink="email"
+            android:background="#000000"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:background="#000000"
-            android:textColor="#FFF"
-            android:layout_marginTop="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/email"
+            android:textColor="#FFF"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/number" />
 
         <TextView
             android:id="@+id/web"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:background="#000000"
-            android:textColor="#FFF"
-            android:layout_marginTop="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autoLink="web"
+            android:background="#000000"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:text="@string/web"
+            android:textColor="#FFF"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email" />
 
         <TextView
             android:id="@+id/about"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:textAppearance="@style/AddressTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:text="@string/about"
-            android:layout_marginTop="24dp"
+            android:textAppearance="@style/AddressTextStyle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/web" />
@@ -91,26 +127,25 @@
 
         <ImageView
             android:id="@+id/qrCode"
-            android:background="@drawable/ic_qr_code"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="24dp"
+            android:background="@drawable/ic_qr_code"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/name"
-        />
+            app:layout_constraintTop_toBottomOf="@id/name" />
 
         <TextView
             android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:lines="3"
-            android:paddingRight="8dp"
-            android:paddingLeft="8dp"
+            android:autoLink="map"
             android:background="#000"
-            android:textColor="#FFF"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:text="@string/address"
+            android:textColor="#FFF"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/about" />
 
